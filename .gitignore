@@ -1,4 +1,5 @@
 node_modules
 Gemfile.lock
 public/compiled/**
-!public/compiled/.gitkeep
+!public/compiled/.gitkeeppublic/images/Dial Logos/
+public/images/roundtrip-big.png
