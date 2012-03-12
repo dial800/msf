@@ -11,8 +11,8 @@ class Github
   # 
   # - After getting the master tree, select the right SHAs
   # - Then go get each of the blobs
-  @getBlobsFor = (repo, callback)=>
-    @getMasterTree repo, (err, tree)=>
+  @getBlobsFor = (repo, branch, callback)=>
+    @getTree repo, branch, (err, tree)=>
       return callback(err) if err
       readme_sha = obj.sha for obj in tree when file_matchers.readme.test(obj.path)
       config_sha = obj.sha for obj in tree when file_matchers.config.test(obj.path)
@@ -43,10 +43,10 @@ class Github
         callback(null, body)
 
   # Gets the master tree of a repository
-  @getMasterTree = (repo, callback)=>
+  @getTree = (repo, branch, callback)=>
     Request
       method: "GET"
-      url: "https://api.github.com/repos/#{repo}/git/trees/master"
+      url: "https://api.github.com/repos/#{repo}/git/trees/#{branch}"
       (err, resp, body)=>
         return callback(err) if err
         data = JSON.parse(body)

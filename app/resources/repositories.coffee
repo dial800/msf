@@ -218,7 +218,9 @@ handleRepository = (req, res, next, callback)->
 
   console.log "COMPILING REPOSITORY: #{req.params.username}/#{req.params.repository}"
 
-  Github.getBlobsFor "#{req.params.username}/#{req.params.repository}", (err, files)->
+  req.params.branch ||= "master"
+  
+  Github.getBlobsFor "#{req.params.username}/#{req.params.repository}" req.params.branch, (err, files)->
     return sendHtml(res, err.message, 500) if err
     {readme, config} = files
 
