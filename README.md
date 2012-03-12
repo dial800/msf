@@ -115,8 +115,8 @@ No match for the call.
 
 ### MercuryMedia
 
-[MercuryMedia](www.mercurymedia.com) uses two slightly different formats, [MLF](http://strong-journey-4929.herokuapp.com//dial800/mlf) and [MSF](http://strong-journey-4929.herokuapp.com//dial800/msf).
+[MercuryMedia](www.mercurymedia.com) uses two slightly different formats, [MLF](http://strong-journey-4929.herokuapp.com/dial800/mlf) and [MSF](http://strong-journey-4929.herokuapp.com/dial800/msf).
 
 ### Euro
 
-Are you using Euro's format? You can find the details [here](http://strong-journey-4929.herokuapp.com//dial800/euro).
+Are you using Euro's format? You can find the details [here](http://strong-journey-4929.herokuapp.com/dial800/euro).
