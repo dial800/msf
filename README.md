@@ -43,7 +43,7 @@ We know. You have two days to integrate with us. Don't worry, it's easy. We're h
 
 ```
 POST /calls
-Content-Type: application/roundtrip.sales
+Content-Type: application/mercury.shortform
 ```
 
 ```xml
@@ -124,7 +124,7 @@ No match for the call.
 
 ```
 PUT /calls
-Content-Type: application/roundtrip.sales
+Content-Type: application/mercury.shortform
 ```
 
 ```xml
@@ -199,11 +199,15 @@ No match for the call.
 404 Not Found
 ```
 
-## Working with Media Agencies
+## Other integrations
+
+### Dial800
+
+[Our native interface](http://docs.dial800.com/).
 
 ### MercuryMedia
 
-[MercuryMedia](www.mercurymedia.com) uses two slightly different formats, [MLF](http://docs.dial800.com/dial800/mlf) and [MSF](http://docs.dial800.com/dial800/msf).
+[Mercury Long Form](http://docs.dial800.com/dial800/mlf).
 
 ### Euro
 
