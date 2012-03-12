@@ -115,7 +115,7 @@ No match for the call.
 
 ### MercuryMedia
 
-[MercuryMedia](www.mercurymedia.com) uses two slightly different formats, [MLF](http://docs.dial800.com/dial800/mlf) and [MSF]http://docs.dial800.com/dial800/msf).
+[MercuryMedia](www.mercurymedia.com) uses two slightly different formats, [MLF](http://docs.dial800.com/dial800/mlf) and [MSF](http://docs.dial800.com/dial800/msf).
 
 ### Euro
 
