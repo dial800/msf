@@ -207,7 +207,7 @@ Server.get "/compiled", handleCompileRequest
 handleRepository = (req, res, next, callback)->
   return next() if req.params.username == "stylesheets" || req.params.username == "images"
 
-  # If the user requested "/" then he wants the DocumentUp repo
+  # If the user requested "/" then he wants the docs.dial800.com repo
   req.params.username ||= "dial800"
   req.params.repository ||= "docs.dial800.com"
 
@@ -219,6 +219,7 @@ handleRepository = (req, res, next, callback)->
   console.log "COMPILING REPOSITORY: #{req.params.username}/#{req.params.repository}"
 
   Github.getBlobsFor "#{req.params.username}/#{req.params.repository}", (err, files)->
+    console.log err.message
     return sendHtml(res, err.message, 500) if err
     {readme, config} = files
 
