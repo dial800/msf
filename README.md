@@ -619,7 +619,7 @@ No match for the call.
     <dd>Upsell #13 Quantity Sold, if used. Integer value. Optional.</dd>
     
     <dt>Upsell14</dt>
-    <dd>Upsell #14 Quantity Sold, if used, or "0". Integer value. Optional. Must be populated for transmission integrity check. Required.</dd>
+    <dd>Upsell #14 Quantity Sold, if used, or "0". Integer value. Must be populated for transmission integrity check. Required.</dd>
 
 </dl>
 
