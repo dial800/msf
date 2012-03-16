@@ -460,21 +460,167 @@ No match for the call.
 ## Glossary
 <dl>
     <dt>ID</dt>
-    <dd>String value representing the alphanumeric Call ID of the phone call to be matched for the associated Sales data. Optional.<br/>
-    (The “&lt;ID&gt;” element must always be passed on its own or an error will be issued.)
-    </dd>
+    <dd>String value representing the alphanumeric Call ID of the phone call to be matched for the associated Sales data. (The “&lt;ID&gt;” element must always be passed on its own or an error will be issued.) Optional.</dd>
+    
     <dt>DNIS</dt>
-    <dd>10-Digit string value representing the DNIS (TFN) of the phone call to be matched for the associated Sales data. Optional.<br/>
-    (The "&lt;DNIS&gt;" element must be passed if the “&lt;ID&gt;” element is absent.)</dd>
+    <dd>10-Digit string value representing the DNIS (TFN) of the phone call to be matched for the associated Sales data. (The "&lt;DNIS&gt;" element must be passed if the “&lt;ID&gt;” element is absent.) Optional.</dd>
+    
     <dt>ANI</dt>
-    <dd>10-Digit string value representing the ANI (Caller #) of the phone call to be matched for the associated Sales data. Optional.<br/>
-    (The "&lt;ANI&gt;" element must be passed if the “&lt;ID&gt;” element is absent.)</dd>
+    <dd>10-Digit string value representing the ANI (Caller #) of the phone call to be matched for the associated Sales data. (The "&lt;ANI&gt;" element must be passed if the “&lt;ID&gt;” element is absent.) Optional.</dd>
+    
     <dt>Target</dt>
-    <dd>10-Digit string value representing the Target (“RingTo”) number of the phone call to be matched for the associated Sales data. Optional.<br/>
-    (The "&lt;Target&gt;" element must be passed if the “&lt;ID&gt;” element is absent.)</dd>
+    <dd>10-Digit string value representing the Target (“RingTo”) number of the phone call to be matched for the associated Sales data. (The "&lt;Target&gt;" element must be passed if the “&lt;ID&gt;” element is absent.) Optional.</dd>
+    
     <dt>CallStart</dt>
-    <dd>The Call Start Time representing when this call was initiated. This value must be expressed using the standard XML DateTime format which includes the timezone offset identifier(i.e. “YYYY-MM-DDThh:mm:ss±HH:MM” or “YYYY-MM-DDThh:mm:ssZ”). Optional.<br/>
-    (The "&lt;CallStart&gt;" element may optionally be passed if the “&lt;ID&gt;” element is absent.)</dd>
+    <dd>The Call Start Time representing when this call was initiated. This value must be expressed using the standard XML DateTime format which includes the timezone offset identifier(i.e. “YYYY-MM-DDThh:mm:ss±HH:MM” or “YYYY-MM-DDThh:mm:ssZ”). (The "&lt;CallStart&gt;" element may optionally be passed if the “&lt;ID&gt;” element is absent.) Optional.</dd>
+    
+    <dt>ProductCode</dt>
+    <dd>Product Code (per Mercury setup sheet) to be associated with the call. Required.</dd>
+    
+    <dt>MediaSource</dt>
+    <dd>Media Source identifying the source of the telephone call. Often a set of call letters (i.e. “KABC”, “KROQ”, etc.) Required.</dd>
+    
+    <dt>CallerFirstName</dt>
+    <dd>The first name of the caller, if known. Optional.</dd>
+    
+    <dt>CallerMiddleName</dt>
+    <dd>The middle name of the caller, if known. Optional.</dd>
+    
+    <dt>CallerLastName</dt>
+    <dd>The last name of the caller, if known. Optional.</dd>
+    
+    <dt>CallerCity</dt>
+    <dd>The City of the caller. Required.</dd>
+    
+    <dt>CallerState</dt>
+    <dd>The State of the caller. Required.</dd>
+    
+    <dt>CallerZipCode</dt>
+    <dd>The ZIP Code of the caller. Required.</dd>
+    
+    <dt>OtherFirstName</dt>
+    <dd>An alernative first name of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherMiddleInitial</dt>
+    <dd>An Alternative middle name of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherLastName</dt>
+    <dd>An alternative last name of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherCity</dt>
+    <dd>An alternative city of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherState</dt>
+    <dd>An alternative state of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherZip</dt>
+    <dd>An alternative ZIP code of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherAreaCode</dt>
+    <dd>An alternative area code of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherPhone</dt>
+    <dd>An alternative phone number of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptQ1-1</dt>
+    <dd>An alternative phone number of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>Gender</dt>
+    <dd>Gender (M/F) of the caller, if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptQ1-3</dt>
+    <dd>Response to Script Question #1-3, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptQ1-4</dt>
+    <dd>Response to Script Question #1-4, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>InqReason</dt>
+    <dd>Inquiry Reason (per Mercury setup sheet) (Generally Not Used). Optional.</dd>
+    
+    <dt>CallCode</dt>
+    <dd>Call Code (per Mercury setup sheet). Required.</dd>
+    
+    <dt>ScriptQ10-2</dt>
+    <dd>Response to Script Question #10-2, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptQ10-3</dt>
+    <dd>Response to Script Question #10-3, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptQ10-4</dt>
+    <dd>Response to Script Question #10-4, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>OrderAmount</dt>
+    <dd>Order Amount, representing the *TOTAL* order value. Required.</dd>
+    
+    <dt>ScriptQ30-1</dt>
+    <dd>Response to Script Question #30-1, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptQ30-2</dt>
+    <dd>Response to Script Question #30-2, if captured. (Generally Not Used). Optional.</dd>
+    
+    <dt>SequenceID</dt>
+    <dd>Sequence ID if known (Generally Not Used). Optional.</dd>
+    
+    <dt>DOB</dt>
+    <dd>Date Of Birth (of caller) if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>OtherDOB</dt>
+    <dd>Alternate Date Of Birth (of caller) if known. (Generally Not Used). Optional.</dd>
+    
+    <dt>ScriptDate3</dt>
+    <dd>Script Date #3 (Generally Not Used). Optional.</dd>
+    
+    <dt>Keycode</dt>
+    <dd>Keycode (Generally Not Used). Optional.</dd>
+    
+    <dt>HitScreenDisp</dt>
+    <dd>Hit Screen/Disposition. (Generally Not Used). Optional.</dd>
+    
+    <dt>MainOfferQty</dt>
+    <dd>Main Offer Quantity Sold. Integer value. Required.</dd>
+    
+    <dt>Upsell1</dt>
+    <dd>Upsell #1 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell2</dt>
+    <dd>Upsell #2 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell3</dt>
+    <dd>Upsell #3 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell4</dt>
+    <dd>Upsell #4 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell5</dt>
+    <dd>Upsell #5 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell6</dt>
+    <dd>Upsell #6 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell7</dt>
+    <dd>Upsell #7 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell8</dt>
+    <dd>Upsell #8 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell9</dt>
+    <dd>Upsell #9 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell10</dt>
+    <dd>Upsell #10 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell11</dt>
+    <dd>Upsell #11 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell12</dt>
+    <dd>Upsell #12 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell13</dt>
+    <dd>Upsell #13 Quantity Sold, if used. Integer value. Optional.</dd>
+    
+    <dt>Upsell14</dt>
+    <dd>Upsell #14 Quantity Sold, if used, or "0". Integer value. Optional. Must be populated for transmission integrity check. Required.</dd>
+
 </dl>
 
 ## Other Integrations
