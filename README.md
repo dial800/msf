@@ -22,7 +22,7 @@ $request->setMethod(HTTP_Request2::METHOD_POST)
     ->setHeader('Content-Type: application/mercury.shortform')
     ->setBody(
         "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n" .
-        "<Call xmlns=\"http://www.dial800.com/roundtrip/2011-07-15\r\n" .
+        "<Call xmlns=\"http://www.dial800.com/roundtrip/2011-07-15\"\r\n" .
         "      xmlns:msf=\"http://www.mercurymedia.com/shortform/2011-07-15\">" .
         "   <ANI>tel:3105555555</ANI>\r\n" .
         "   <Target>tel:3109999999</Target>\r\n" . 
